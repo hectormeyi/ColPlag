@@ -1,8 +1,14 @@
 #root {
+  /* No necesitamos el max-width aquí */
+  padding: 0;
+  text-align: center;
+}
+
+.main-container {
+  /* Este es el contenedor que limita el ancho de toda la página */
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -41,3 +47,30 @@
   color: #888;
 }
 
+/* Modo claro */
+.light {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo oscuro */
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background-color: #555;
+}

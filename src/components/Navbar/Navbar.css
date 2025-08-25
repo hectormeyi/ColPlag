@@ -2,30 +2,71 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1e3a8a;
-  color: white;
-  padding: 15px 40px;
+  padding: 0; /* Quitamos el padding del navbar para que el contenedor interior lo maneje */
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: #1e3a8a !important; 
+  color: white !important; 
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Estas reglas limitan el ancho y centran el contenido */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5px 40px; /* Agregamos el padding al contenedor interior */
+  width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible dentro del navbar */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar .theme-toggle {
+  margin-left: 30px;
+  padding: 0.5rem 1rem;
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar .theme-toggle:hover {
+  background-color: #555;
+}
+
 .logo {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
+  margin: 0;
 }
+
 .navbar ul {
   display: flex;
   list-style: none;
   gap: 25px;
+  margin: 0;
+  padding: 0;
 }
+
 .navbar a {
-  color: white;
+  color: white !important;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 5px 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
+  line-height: 1;
 }
+
 .navbar a:hover {
   background: #2563eb;
   color: #fff7d6;

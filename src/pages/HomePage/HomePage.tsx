@@ -1,11 +1,9 @@
 import Header from "../../components/Header/Header";
-import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
   return (
     <>
-      <Navbar />
       <Header />
       <section>
         <h1>Bienvenido a nuestra página</h1>

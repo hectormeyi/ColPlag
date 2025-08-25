@@ -3,7 +3,7 @@ function Footer() {
   return (
     <footer className="footer">
       <p>
-        © 2025 QuindioSoft Servicio web segun tus necesidades - Todos los derechos
+        © 2025 QuindioSoft Soluciones integrales - Todos los derechos
         reservados QuindioSoft
       </p>
     </footer>

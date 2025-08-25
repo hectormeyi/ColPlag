@@ -47,13 +47,11 @@ const services = [
   },
 ];
 
-import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 export default function Services() {
   return (
     <>
-      <Navbar />
       <section
         className="services-wrap"
         style={{ padding: "32px 20px", maxWidth: 1280, margin: "0 auto" }}

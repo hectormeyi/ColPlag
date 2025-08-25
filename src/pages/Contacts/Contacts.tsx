@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar/Navbar";
+
 import Footer from "../../components/Footer/Footer";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import "./Contacts.css";
@@ -6,7 +6,6 @@ import "./Contacts.css";
 function Contact() {
   return (
     <>
-      <Navbar />
       <div className="contact-container">
         <div className="contact-image">
           <img

@@ -1,10 +1,10 @@
-import Navbar from "../../components/Navbar/Navbar";
+
 import Footer from "../../components/Footer/Footer";
 
 function About() {
   return (
     <>
-      <Navbar />
+    
       <div style={{ padding: "32px 20px", maxWidth: 800, margin: "0 auto" }}>
         <h1>Quiénes Somos</h1>
         <p>
