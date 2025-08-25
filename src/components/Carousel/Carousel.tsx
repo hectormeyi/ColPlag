@@ -32,6 +32,7 @@ export default Carousel; */
 // ...existing code...
 
 import { useEffect, useState } from "react";
+import "./Carousel.css";
 
 type Slide = {
   src: string;
@@ -80,7 +81,9 @@ export default function Carousel() {
 
   const go = (dir: "prev" | "next") => {
     setIndex((i) =>
-      dir === "next" ? (i + 1) % slides.length : (i - 1 + slides.length) % slides.length
+      dir === "next"
+        ? (i + 1) % slides.length
+        : (i - 1 + slides.length) % slides.length
     );
   };
 
@@ -104,10 +107,18 @@ export default function Carousel() {
       )}
 
       {/* controles */}
-      <button className="nav prev" aria-label="Anterior" onClick={() => go("prev")}>
+      <button
+        className="nav prev"
+        aria-label="Anterior"
+        onClick={() => go("prev")}
+      >
         &#10094;
       </button>
-      <button className="nav next" aria-label="Siguiente" onClick={() => go("next")}>
+      <button
+        className="nav next"
+        aria-label="Siguiente"
+        onClick={() => go("next")}
+      >
         &#10095;
       </button>
 

@@ -1,17 +1,9 @@
-/* Grid (puedes usarlo en la page) */
-.svc-grid {
-  display: grid;
-  gap: 22px;
-  grid-template-columns: 1fr;
-}
-@media (min-width: 640px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .svc-grid { grid-template-columns: repeat(4, 1fr); } }
+/* src/components/Card/Card.module.css */
 
-/* Card base */
-.svc-card {
+.card {
   position: relative;
-  background: #0f172a; /* slate-900 */
-  color: #e5e7eb;
+  background: var(--color-dark);
+  color: var(--color-light);
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(2, 6, 23, 0.35);
@@ -22,35 +14,35 @@
   cursor: pointer;
 }
 
-.svc-card:hover,
-.svc-card:focus-visible {
+.card:hover,
+.card:focus-visible {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 18px 45px rgba(30, 64, 175, 0.45); /* azul */
+  box-shadow: 0 18px 45px rgba(30, 64, 175, 0.45);
   border-color: rgba(37, 99, 235, 0.4);
 }
 
-/* Imagen */
-.svc-card__image {
+.cardImage {
   position: relative;
   height: 160px;
   background: #111827;
   overflow: hidden;
 }
-.svc-card__image img {
+
+.cardImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: scale(1.02);
   transition: transform .6s ease, filter .6s ease;
 }
-.svc-card:hover .svc-card__image img,
-.svc-card:focus-visible .svc-card__image img {
+
+.card:hover .cardImage img,
+.card:focus-visible .cardImage img {
   transform: scale(1.08);
   filter: brightness(1.05);
 }
 
-/* Glow decorativo */
-.svc-card__glow {
+.cardGlow {
   position: absolute;
   inset: -40%;
   background: radial-gradient(650px circle at var(--mx, 50%) var(--my, 50%),
@@ -59,31 +51,32 @@
   transition: opacity .3s ease;
   pointer-events: none;
 }
-.svc-card:hover .svc-card__glow,
-.svc-card:focus-visible .svc-card__glow { opacity: 1; }
 
-/* Contenido */
-.svc-card__body {
+.card:hover .cardGlow,
+.card:focus-visible .cardGlow {
+  opacity: 1;
+}
+
+.cardBody {
   padding: 16px 16px 18px;
 }
-.svc-card__title {
+
+.cardTitle {
   margin: 0 0 8px;
   font-size: 1.05rem;
   font-weight: 700;
   color: #f8fafc;
   letter-spacing: .2px;
 }
-.svc-card__desc {
+
+.cardDesc {
   margin: 0;
   color: #cbd5e1;
   font-size: .95rem;
   line-height: 1.5;
 }
 
-/* Accesibilidad */
-.svc-card:focus-visible {
-  box-shadow:
-    0 18px 45px rgba(30, 64, 175, 0.45),
-    0 0 0 3px rgba(59, 130, 246, 0.55);
+.card:focus-visible {
+  box-shadow: 0 18px 45px rgba(30, 64, 175, 0.45), 0 0 0 3px rgba(59, 130, 246, 0.55);
   outline: none;
 }

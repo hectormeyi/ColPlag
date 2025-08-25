@@ -13,8 +13,8 @@
 }
 
 export default Services; */
-import ServiceCard from "../components/ServiceCard";
-//import "./services.css"; // opcional si quieres estilos extra de la página
+import ServiceCard from "../../components/Card/Card";
+import styles from "../../components/Grid/Grid.module.css";
 
 const services = [
   {
@@ -47,27 +47,37 @@ const services = [
   },
 ];
 
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+
 export default function Services() {
   return (
-    <section className="services-wrap" style={{ padding: "32px 20px", maxWidth: 1280, margin: "0 auto" }}>
-      <header style={{ marginBottom: 18 }}>
-        <h1 style={{ margin: 0, fontSize: "1.8rem" }}>Nuestros servicios</h1>
-        <p style={{ marginTop: 8, color: "#475569" }}>
-          Soluciones de control de plagas para hogares, comercios, flotas y complejos empresariales.
-        </p>
-      </header>
+    <>
+      <Navbar />
+      <section
+        className="services-wrap"
+        style={{ padding: "32px 20px", maxWidth: 1280, margin: "0 auto" }}
+      >
+        <header style={{ marginBottom: 18 }}>
+          <h1 style={{ margin: 0, fontSize: "1.8rem" }}>Nuestros servicios</h1>
+          <p style={{ marginTop: 8, color: "#475569" }}>
+            Soluciones de control de plagas para hogares, comercios, flotas y
+            complejos empresariales.
+          </p>
+        </header>
 
-      <div className="svc-grid">
-        {services.map((s) => (
-          <ServiceCard
-            key={s.title}
-            title={s.title}
-            description={s.description}
-            image={s.image}
-          />
-        ))}
-      </div>
-    </section>
+        <div className={styles.grid}>
+          {services.map((s) => (
+            <ServiceCard
+              key={s.title}
+              title={s.title}
+              description={s.description}
+              image={s.image}
+            />
+          ))}
+        </div>
+      </section>
+      <Footer />
+    </>
   );
 }
-

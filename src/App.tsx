@@ -1,24 +1,21 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// src/App.tsx
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import About from "./pages/WhoWeAre/WhoWeAre";
+import Services from "./pages/services/Services";
+import Contact from "./pages/Contacts/Contacts";
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
+    <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

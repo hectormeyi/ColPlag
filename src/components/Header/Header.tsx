@@ -1,4 +1,5 @@
-import Carousel from "./Carousel";
+import Carousel from "../Carousel/Carousel";
+import "./Header.css";
 
 function Header() {
   return (

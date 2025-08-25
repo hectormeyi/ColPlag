@@ -1,0 +1,12 @@
+/* src/pages/HomePage/HomePage.module.css */
+
+.welcomeSection {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.servicesSection {
+  padding: 20px;
+}

@@ -1,0 +1,17 @@
+/* src/styles/global.css */
+
+:root {
+  --color-primary: #007bff;
+  --color-dark: #0f172a;
+  --color-light: #e5e7eb;
+  --color-accent: #2563eb;
+  --font-body: 'Helvetica', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f0f2f5;
+  color: #1a202c; /* Color de texto por defecto */
+  margin: 0;
+  padding: 0;
+}
